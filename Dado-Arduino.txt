@@ -1,0 +1,76 @@
+/*
+Autor: João Pedro
+Descrição: 
+Data: 18/03
+Versão: 1.0
+*/
+
+const char pinLed1 = 2;
+const char pinLed2 = 3;
+const char pinLed3 = 4;
+const char pinLed4 = 5;
+const char pinLed5 = 13;
+const char pinLed6 = 12;
+  
+int numero;  
+  
+void setup()
+{
+  Serial.begin(9600);
+  pinMode(pinLed1, OUTPUT);
+  pinMode(pinLed2, OUTPUT);
+  pinMode(pinLed3, OUTPUT);
+  pinMode(pinLed4, OUTPUT);
+  pinMode(pinLed5, OUTPUT);
+  pinMode(pinLed6, OUTPUT);
+  
+  
+  
+  
+  
+  randomSeed(analogRead(A0));
+  numero = random(1,7);
+}
+
+void loop()
+{
+ 
+  switch (numero)
+  {
+    case 1:
+    digitalWrite(pinLed1, HIGH);
+    Serial.println("Sorteado 1");
+    break;
+    
+    case 2:
+     digitalWrite(pinLed2, HIGH);
+     Serial.println("Sorteado 2");
+    break;
+    
+    case 3:
+     digitalWrite(pinLed3, HIGH);
+     Serial.println("Sorteado 3");
+    break;
+    
+    case 4:
+     digitalWrite(pinLed4,HIGH);
+     Serial.println("Sorteado 4");  
+    break;
+    
+    case 5:
+     digitalWrite(pinLed5, HIGH);
+     Serial.println("Sorteado 5");
+    break;
+    
+    case 6:
+     digitalWrite(pinLed6, HIGH);
+    Serial.println("Sorteado 6");
+    break;
+    
+    default:
+    Serial.println("erro no Sorteio");
+    
+    break;
+    
+    
+  }
